@@ -25,6 +25,9 @@ class User(db.Model):
 
     def is_admin(self):
         return self.admin
+    
+    def get_email(self):
+        return self.email
 
     def check_password(self, password):
         return bcrypt.checkpw(password.encode('utf-8'), self.password.encode('utf-8'))
