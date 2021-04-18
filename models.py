@@ -28,7 +28,8 @@ class User(db.Model):
     
     def get_email(self):
         return self.email
-    def get_ID(self):
+
+    def get_id(self):
         return self.id
 
     def check_password(self, password):
