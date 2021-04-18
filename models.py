@@ -31,6 +31,9 @@ class User(db.Model):
 
     def get_id(self):
         return self.id
+    
+    def get_username(self):
+        return self.username
 
     def check_password(self, password):
         return bcrypt.checkpw(password.encode('utf-8'), self.password.encode('utf-8'))
